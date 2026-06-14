@@ -1,0 +1,162 @@
+/* ============================================================
+   IDI Auto — Global Stylesheet  (no borders on cards)
+   ============================================================ */
+
+:root { --bg: #080808; --bg2: #111; --b: rgba(255,255,255,0.07); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: #fff; font-family: 'Roboto', sans-serif; overflow-x: hidden; }
+a { color: #fff; text-decoration: none; }
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #222; }
+
+/* ── MENU ── */
+.menu-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(8,8,8,.98); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .5s; }
+.menu-overlay.open { opacity: 1; pointer-events: all; }
+.menu-close { position: absolute; top: 36px; right: 64px; font-size: 13px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #555; cursor: pointer; transition: color .2s; }
+.menu-close:hover { color: #fff; }
+.menu-links { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.menu-links a { font-family: 'Roboto Condensed', sans-serif; font-size: clamp(38px, 5.5vw, 58px); font-weight: 700; color: #222; text-transform: uppercase; letter-spacing: 2px; transition: color .25s; line-height: 1.1; }
+.menu-links a:hover, .menu-links a.active { color: #fff; }
+
+/* ── NAV ── */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 32px 60px; transition: background .5s, padding .4s, border-bottom-color .5s; border-bottom: .5px solid transparent; }
+.nav.scrolled { background: rgba(8,8,8,.96); padding: 22px 60px; border-bottom-color: var(--b); backdrop-filter: blur(12px); }
+.nav-burger { display: flex; align-items: center; gap: 14px; cursor: pointer; }
+.burger-lines { display: flex; flex-direction: column; gap: 6px; }
+.burger-lines span { display: block; width: 26px; height: 1px; background: #fff; }
+.burger-label { font-size: 13px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; }
+.nav-logo { text-align: center; font-family: 'Roboto Condensed', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; justify-content: flex-end; }
+.nav-right a { font-size: 13px; font-weight: 300; letter-spacing: 2.5px; text-transform: uppercase; transition: opacity .2s; }
+.nav-right a:hover { opacity: .6; }
+
+/* Language switcher */
+.lang-switcher { display: flex; align-items: center; border-left: .5px solid #333; padding-left: 18px; }
+.lang-btn { cursor: pointer; transition: opacity .2s; background: none; border: none; color: #fff; font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 300; letter-spacing: 2px; padding: 0; text-transform: uppercase; }
+.lang-btn:hover { opacity: .6; }
+
+/* ── DIVIDERS (only horizontal lines, no boxes) ── */
+.div { height: .5px; background: var(--b); }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .85s ease, transform .85s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: .12s; } .d2 { transition-delay: .24s; } .d3 { transition-delay: .36s; }
+
+/* ── TYPOGRAPHY HELPERS ── */
+.eyebrow { font-size: 12px; font-weight: 300; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 18px; }
+.section { padding: 88px 60px; }
+.section-center { text-align: center; margin-bottom: 60px; }
+.section-title { font-family: 'Roboto Condensed', sans-serif; font-size: clamp(36px, 4.5vw, 54px); font-weight: 300; letter-spacing: 1px; }
+
+/* ── LOGO BAR (marquee) ── */
+.marquee-wrap { overflow: hidden; padding: 36px 0; border-top: .5px solid var(--b); border-bottom: .5px solid var(--b); }
+.marquee-track { display: flex; align-items: center; width: max-content; animation: marquee 32s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+.logo-item { display: flex; align-items: center; justify-content: center; height: 66px; margin: 0 30px; flex-shrink: 0; opacity: .65; transition: opacity .25s; }
+.logo-item:hover { opacity: 1; }
+.logo-item img { height: 100%; width: auto; object-fit: contain; }
+.logo-item.logo-ferrari { height: 44px; }
+.logo-item.logo-mclaren { height: 40px; }
+.logo-item.logo-rangerover { height: 48px; }
+.logo-item.logo-big { height: 90px; }
+
+/* ── BUTTONS ── */
+.btn-ghost { font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: #fff; background: transparent; border: .5px solid #fff; padding: 15px 48px; cursor: pointer; transition: background .3s, color .3s; display: inline-block; }
+.btn-ghost:hover { background: #fff; color: #080808; }
+.btn-text { font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: transparent; border: none; cursor: pointer; opacity: .6; transition: opacity .2s; padding: 12px 0; }
+.btn-text:hover { opacity: 1; }
+
+/* ── FORM ── */
+.form-wrap { display: flex; flex-direction: column; gap: 10px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.form-field { width: 100%; padding: 18px 20px; background: #1c1c1c; border: none; border-radius: 8px; color: #fff; font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 300; outline: none; transition: background .2s; appearance: none; }
+.form-field::placeholder { color: #555; }
+.form-field:focus { background: #222; }
+textarea.form-field { resize: none; height: 130px; }
+.btn-send { width: 100%; padding: 18px; background: #fff; border: none; border-radius: 999px; color: #080808; font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 2px; cursor: pointer; transition: background .3s; margin-top: 4px; }
+.btn-send:hover { background: #ddd; }
+
+/* ── FLEET CARDS (no border boxes) ── */
+.fleet-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+.fleet-card { aspect-ratio: 4/3; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; position: relative; overflow: hidden; cursor: pointer; }
+.fleet-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,.92) 0%, transparent 65%); z-index: 1; transition: opacity .3s; }
+.fleet-card:hover::before { opacity: .65; }
+.fleet-card:nth-child(1)  { background: radial-gradient(ellipse at 62% 42%, #0d1622 0%, #080808 68%); }
+.fleet-card:nth-child(2)  { background: radial-gradient(ellipse at 38% 58%, #140d0d 0%, #080808 68%); }
+.fleet-card:nth-child(3)  { background: radial-gradient(ellipse at 72% 32%, #0a1212 0%, #080808 68%); }
+.fleet-card:nth-child(4)  { background: radial-gradient(ellipse at 28% 68%, #120e0a 0%, #080808 68%); }
+.fleet-card:nth-child(5)  { background: radial-gradient(ellipse at 62% 50%, #0e1220 0%, #080808 68%); }
+.fleet-card:nth-child(6)  { background: radial-gradient(ellipse at 50% 38%, #0a0e0a 0%, #080808 68%); }
+.fleet-card:nth-child(7)  { background: radial-gradient(ellipse at 40% 60%, #0e0e14 0%, #080808 68%); }
+.fleet-card:nth-child(8)  { background: radial-gradient(ellipse at 60% 40%, #140f0a 0%, #080808 68%); }
+.fleet-card:nth-child(9)  { background: radial-gradient(ellipse at 35% 55%, #0a1010 0%, #080808 68%); }
+.fleet-arrow { position: absolute; top: 22px; right: 22px; z-index: 2; font-size: 14px; color: #333; transition: color .25s, transform .25s; }
+.fleet-card:hover .fleet-arrow { color: #fff; transform: translate(3px,-3px); }
+.fleet-brand { position: relative; z-index: 2; font-family: 'Roboto Condensed', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.fleet-tag { position: relative; z-index: 2; font-size: 12px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #888; }
+
+/* ── SERVICE CARDS (no border boxes) ── */
+.service-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; }
+.service-card { padding: 0; }
+.service-num { font-size: 12px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: #333; margin-bottom: 20px; }
+.service-title { font-family: 'Roboto Condensed', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.service-text { font-size: 14px; font-weight: 300; line-height: 2; }
+
+/* ── PROCESS STEPS (no border boxes) ── */
+.proc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 48px; padding-top: 48px; border-top: .5px solid var(--b); }
+.proc-num { font-size: 12px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: #333; margin-bottom: 20px; }
+.proc-title { font-family: 'Roboto Condensed', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.proc-text { font-size: 14px; font-weight: 300; line-height: 2; }
+
+/* ── PAGE HERO (inner pages) ── */
+.page-hero { padding: 180px 60px 80px; border-bottom: .5px solid var(--b); }
+.page-hero-eyebrow { font-size: 12px; font-weight: 300; letter-spacing: 5px; text-transform: uppercase; color: #555; margin-bottom: 20px; }
+.page-hero-title { font-family: 'Roboto Condensed', sans-serif; font-size: clamp(52px, 7vw, 88px); font-weight: 300; line-height: .95; letter-spacing: 1px; }
+
+/* ── SOCIALS + FOOTER ── */
+.socials-section { background: #111; }
+.socials-inner { padding: 48px 60px; }
+.socials-title { font-family: 'Roboto Condensed', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 32px; }
+.socials-row { display: flex; align-items: center; padding: 20px 0; border-top: .5px solid #1e1e1e; border-bottom: .5px solid #1e1e1e; }
+.social-item { display: flex; align-items: center; gap: 12px; flex: 1; transition: opacity .2s; }
+.social-item:hover { opacity: .6; }
+.social-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.social-name { font-size: 15px; font-weight: 300; letter-spacing: 1px; }
+.social-plus { font-size: 16px; font-weight: 300; margin-left: 4px; color: #555; }
+.footer-bottom { padding: 24px 60px; border-top: .5px solid #1e1e1e; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-size: 13px; font-weight: 300; color: #555; }
+.footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-legal a { font-size: 13px; font-weight: 300; color: #555; transition: color .2s; }
+.footer-legal a:hover { color: #fff; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp   { to { opacity: 1; transform: translateY(0); } }
+@keyframes marquee  { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes scrollPulse { 0%,100%{ opacity:.2; } 50%{ opacity:.6; } }
+
+/* ── FLOATING WHATSAPP BUTTON ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 150;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  border: 0.5px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .25s, transform .25s, border-color .25s;
+}
+.whatsapp-float:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.3);
+  transform: scale(1.06);
+}
+.whatsapp-float svg { width: 32px; height: 32px; }
