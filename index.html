@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IDI Auto — Exporting Luxury Cars Worldwide</title>
+
+  <meta name="description" content="IDI Auto — премиальный сервис по пригону эксклюзивных автомобилей: Rolls-Royce, Bentley, Mercedes-Maybach, Ferrari, Lamborghini, Porsche. Доставка в Россию, Казахстан, ОАЭ и по всему миру. Полное оформление, таможня, гарантия.">
+  <meta name="keywords" content="пригон автомобилей, премиум авто, Rolls-Royce, Bentley, Maybach, Ferrari, Lamborghini, Porsche, авто из Европы, авто из США, авто из ОАЭ, импорт авто Казахстан, импорт авто Россия, luxury car import, Dubai car import">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://YOURUSERNAME.github.io/idi-auto/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IDI Auto — Пригон Премиальных Автомобилей в Россию, Казахстан и Дубай | Rolls-Royce, Bentley, Maybach, Ferrari">
+  <meta property="og:description" content="IDI Auto — премиальный сервис по пригону эксклюзивных автомобилей: Rolls-Royce, Bentley, Mercedes-Maybach, Ferrari, Lamborghini, Porsche. Доставка в Россию, Казахстан, ОАЭ и по всему миру. Полное оформление, таможня, гарантия.">
+  <meta property="og:url" content="https://YOURUSERNAME.github.io/idi-auto/">
+  <meta property="og:image" content="https://YOURUSERNAME.github.io/idi-auto/images/og-cover.jpg">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="IDI Auto">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IDI Auto — Пригон Премиальных Автомобилей в Россию, Казахстан и Дубай | Rolls-Royce, Bentley, Maybach, Ferrari">
+  <meta name="twitter:description" content="IDI Auto — премиальный сервис по пригону эксклюзивных автомобилей: Rolls-Royce, Bentley, Mercedes-Maybach, Ferrari, Lamborghini, Porsche. Доставка в Россию, Казахстан, ОАЭ и по всему миру. Полное оформление, таможня, гарантия.">
+  <meta name="twitter:image" content="https://YOURUSERNAME.github.io/idi-auto/images/og-cover.jpg">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-bg video{width:100%;height:100%;object-fit:cover}
+    .hero-fallback{width:100%;height:100%;background:radial-gradient(ellipse at 68% 48%,#0c1320 0%,#080808 65%),radial-gradient(ellipse at 28% 72%,#100a0a 0%,transparent 50%)}
+    .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(8,8,8,.5) 0%,rgba(8,8,8,.05) 40%,rgba(8,8,8,.75) 100%)}
+    .hero-content{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;padding:0 48px}
+    .hero-h1{font-family:'Roboto Condensed',sans-serif;font-size:clamp(64px,9.5vw,112px);font-weight:300;line-height:.95;letter-spacing:1px;margin-bottom:32px;opacity:0;transform:translateY(28px);animation:fadeUp 1s ease .3s forwards}
+    .hero-desc{font-size:15px;font-weight:300;line-height:2;max-width:440px;margin-bottom:44px;opacity:0;animation:fadeUp 1s ease .6s forwards}
+    .hero-cta{opacity:0;animation:fadeUp 1s ease .9s forwards}
+    .hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp 1s ease 1.4s forwards}
+    .hero-scroll-lbl{font-size:11px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:#333}
+    .scroll-line{width:.5px;height:40px;background:#222;animation:scrollPulse 2.2s ease infinite}
+    .mission{padding:100px 60px;display:flex;align-items:center;justify-content:center}
+    .mission-inner{max-width:660px;text-align:center}
+    .mission-title{font-family:'Roboto Condensed',sans-serif;font-size:clamp(34px,4vw,50px);font-weight:300;letter-spacing:1px;line-height:1.15;margin-bottom:22px}
+    .mission-text{font-size:15px;font-weight:300;line-height:2}
+    .fleet-wrap{padding:0 60px 80px}
+    .fleet-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:36px;padding-bottom:18px;border-bottom:.5px solid var(--b)}
+    .fleet-hdr-title{font-family:'Roboto Condensed',sans-serif;font-size:36px;font-weight:300;letter-spacing:1px}
+    .fleet-hdr-sub{font-size:13px;font-weight:300;letter-spacing:3px;text-transform:uppercase}
+    .fleet-cta{margin-top:32px;text-align:center}
+    .contact-wrap{padding:88px 60px;border-top:.5px solid var(--b);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .contact-title{font-family:'Roboto Condensed',sans-serif;font-size:48px;font-weight:300;letter-spacing:1px;line-height:1.05;margin-bottom:20px}
+    .contact-desc{font-size:14px;font-weight:300;line-height:2;max-width:340px}
+    @media (max-width:768px){
+      .hero{min-height:520px}
+      .hero-content{padding:0 24px}
+      .hero-h1{font-size:clamp(40px,11vw,68px);margin-bottom:22px}
+      .hero-desc{font-size:14px;line-height:1.9;margin-bottom:30px}
+      .mission{padding:60px 22px}
+      .mission-text{font-size:14px}
+      .fleet-wrap{padding:0 22px 56px}
+      .fleet-hdr{flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:28px}
+      .fleet-hdr-title{font-size:30px}
+      .contact-wrap{grid-template-columns:1fr;gap:32px;padding:60px 22px}
+      .contact-title{font-size:38px}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "IDI Auto",
+    "description": "Премиальный сервис по пригону эксклюзивных автомобилей (Rolls-Royce, Bentley, Mercedes-Maybach, Ferrari, Lamborghini, Porsche) в Россию, Казахстан, ОАЭ и по всему миру.",
+    "url": "https://YOURUSERNAME.github.io/idi-auto/",
+    "logo": "https://YOURUSERNAME.github.io/idi-auto/images/favicon.png",
+    "image": "https://YOURUSERNAME.github.io/idi-auto/images/og-cover.jpg",
+    "priceRange": "$$$$",
+    "areaServed": [
+      { "@type": "Country", "name": "Russia" },
+      { "@type": "Country", "name": "Kazakhstan" },
+      { "@type": "Country", "name": "United Arab Emirates" }
+    ],
+    "sameAs": [
+      "https://wa.me/YOURNUMBER",
+      "https://t.me/YOURUSERNAME",
+      "https://instagram.com/YOURUSERNAME"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Rolls-Royce" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bentley" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Mercedes-Maybach" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ferrari" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Lamborghini" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Porsche" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="menu-overlay" id="menuOverlay">
+  <span class="menu-close" onclick="closeMenu()" data-i18n="nav.close">Close</span>
+  <nav class="menu-links">
+    <a href="index.html"    data-i18n="nav.home">Home</a>
+    <a href="cars.html"     data-i18n="nav.cars">Automobiles</a>
+    <a href="order.html"    data-i18n="nav.order">Import</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="about.html"    data-i18n="nav.about">About</a>
+    <a href="contact.html"  data-i18n="nav.contact">Contact</a>
+  </nav>
+</div>
+<header class="nav" id="mainNav">
+  <div class="nav-burger" onclick="openMenu()">
+    <div class="burger-lines"><span></span><span></span><span></span></div>
+    <span class="burger-label" data-i18n="nav.menu">Menu</span>
+  </div>
+  <a href="index.html" class="nav-logo">IDI Auto</a>
+  <div class="nav-right">
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" onclick="switchLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline src="video/hero.mp4"></video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-h1" data-i18n-html="hero.title">Exporting Luxury<br>Cars Worldwide</h1>
+    <p class="hero-desc" data-i18n-html="hero.desc">We source and deliver the world's most exclusive vehicles.</p>
+    <a href="order.html" class="btn-ghost hero-cta" data-i18n="hero.cta">Discover Our Exclusive Options</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="div"></div>
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="logo-item logo-big"><img src="images/brands/rollsroyce.png" alt="Rolls-Royce"></div>
+    <div class="logo-item logo-big"><img src="images/brands/maybach.png" alt="Maybach"></div>
+    <div class="logo-item"><img src="images/brands/bentley.png" alt="Bentley"></div>
+    <div class="logo-item"><img src="images/brands/brabus.png" alt="Brabus"></div>
+    <div class="logo-item logo-big"><img src="images/brands/alpina.png" alt="Alpina"></div>
+    <div class="logo-item logo-rangerover"><img src="images/brands/rangerover.png" alt="Range Rover"></div>
+    <div class="logo-item"><img src="images/brands/cadillac.png" alt="Cadillac"></div>
+    <div class="logo-item"><img src="images/brands/astonmartin.png" alt="Aston Martin"></div>
+    <div class="logo-item logo-big"><img src="images/brands/porsche.png" alt="Porsche"></div>
+    <div class="logo-item"><img src="images/brands/lamborghini.png" alt="Lamborghini"></div>
+    <div class="logo-item logo-ferrari"><img src="images/brands/ferrari.png" alt="Ferrari"></div>
+    <div class="logo-item logo-mclaren"><img src="images/brands/mclaren.png" alt="McLaren"></div>
+    <div class="logo-item"><img src="images/brands/bugatti.png" alt="Bugatti"></div>
+    <div class="logo-item logo-big"><img src="images/brands/rollsroyce.png" alt="Rolls-Royce"></div>
+    <div class="logo-item logo-big"><img src="images/brands/maybach.png" alt="Maybach"></div>
+    <div class="logo-item"><img src="images/brands/bentley.png" alt="Bentley"></div>
+    <div class="logo-item"><img src="images/brands/brabus.png" alt="Brabus"></div>
+    <div class="logo-item logo-big"><img src="images/brands/alpina.png" alt="Alpina"></div>
+    <div class="logo-item logo-rangerover"><img src="images/brands/rangerover.png" alt="Range Rover"></div>
+    <div class="logo-item"><img src="images/brands/cadillac.png" alt="Cadillac"></div>
+    <div class="logo-item"><img src="images/brands/astonmartin.png" alt="Aston Martin"></div>
+    <div class="logo-item logo-big"><img src="images/brands/porsche.png" alt="Porsche"></div>
+    <div class="logo-item"><img src="images/brands/lamborghini.png" alt="Lamborghini"></div>
+    <div class="logo-item logo-ferrari"><img src="images/brands/ferrari.png" alt="Ferrari"></div>
+    <div class="logo-item logo-mclaren"><img src="images/brands/mclaren.png" alt="McLaren"></div>
+    <div class="logo-item"><img src="images/brands/bugatti.png" alt="Bugatti"></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="div"></div>
+
+<section class="mission" id="mission">
+  <div class="mission-inner">
+    <p class="eyebrow reveal" data-i18n="mission.eyebrow">About IDI Auto</p>
+    <h2 class="mission-title reveal d1" data-i18n="mission.title">Exclusivity Without Borders</h2>
+    <p class="mission-text reveal d2" data-i18n-html="mission.text">IDI Auto is a premium vehicle import service.</p>
+  </div>
+</section>
+<div class="div"></div>
+
+<section class="fleet-wrap" id="fleet">
+  <div class="fleet-hdr reveal">
+    <h2 class="fleet-hdr-title" data-i18n="fleet.title">Our Fleet</h2>
+    <span class="fleet-hdr-sub" data-i18n="fleet.sub">Exclusive Selection</span>
+  </div>
+  <div class="fleet-grid">
+    <div class="fleet-card reveal"><span class="fleet-arrow">↗</span><div class="fleet-brand">Rolls&#8209;Royce</div><div class="fleet-tag" data-i18n="fleet.rr.tag">Ultra Luxury</div></div>
+    <div class="fleet-card reveal d1"><span class="fleet-arrow">↗</span><div class="fleet-brand">Bentley</div><div class="fleet-tag" data-i18n="fleet.bentley.tag">Grand Touring</div></div>
+    <div class="fleet-card reveal d2"><span class="fleet-arrow">↗</span><div class="fleet-brand">Mercedes&#8209;Maybach</div><div class="fleet-tag" data-i18n="fleet.maybach.tag">Ultimate Comfort</div></div>
+    <div class="fleet-card reveal"><span class="fleet-arrow">↗</span><div class="fleet-brand">Ferrari</div><div class="fleet-tag" data-i18n="fleet.ferrari.tag">Performance</div></div>
+    <div class="fleet-card reveal d1"><span class="fleet-arrow">↗</span><div class="fleet-brand">Lamborghini</div><div class="fleet-tag" data-i18n="fleet.lambo.tag">Supercar</div></div>
+    <div class="fleet-card reveal d2"><span class="fleet-arrow">↗</span><div class="fleet-brand">Porsche</div><div class="fleet-tag" data-i18n="fleet.porsche.tag">Precision</div></div>
+  </div>
+  <div class="fleet-cta reveal"><a href="cars.html" class="btn-text" data-i18n="fleet.viewall">View All Available Vehicles →</a></div>
+</section>
+<div class="div"></div>
+
+<section class="section" id="process">
+  <div class="section-center">
+    <p class="eyebrow reveal" data-i18n="process.eyebrow">How We Work</p>
+    <h2 class="section-title reveal d1" data-i18n="process.title">Global Export Process</h2>
+  </div>
+  <div class="proc-grid">
+    <div class="reveal"><div class="proc-num" data-i18n="process.1.n">01</div><div class="proc-title" data-i18n="process.1.title">Initial Consultation</div><div class="proc-text" data-i18n="process.1.text">We discuss your vision, preferences and budget.</div></div>
+    <div class="reveal d1"><div class="proc-num" data-i18n="process.2.n">02</div><div class="proc-title" data-i18n="process.2.title">Global Sourcing</div><div class="proc-text" data-i18n="process.2.text">We locate the exact vehicle worldwide.</div></div>
+    <div class="reveal d2"><div class="proc-num" data-i18n="process.3.n">03</div><div class="proc-title" data-i18n="process.3.title">Door-to-Door Delivery</div><div class="proc-text" data-i18n="process.3.text">Full documentation, customs clearance and direct delivery.</div></div>
+  </div>
+</section>
+
+<section class="contact-wrap" id="contact">
+  <div class="reveal">
+    <p class="eyebrow" data-i18n="form.eyebrow">Get In Touch</p>
+    <h2 class="contact-title" data-i18n-html="form.title">Contact<br>Form</h2>
+    <p class="contact-desc" data-i18n="form.desc">Tell us what vehicle you are looking for.</p>
+  </div>
+  <div class="form-wrap reveal d1">
+    <div class="form-row">
+      <input class="form-field" type="text"  data-i18n-placeholder="form.name"  placeholder="*Name">
+      <input class="form-field" type="email" data-i18n-placeholder="form.email" placeholder="*Email">
+    </div>
+    <div class="form-row">
+      <input class="form-field" type="tel"  data-i18n-placeholder="form.phone" placeholder="*Phone Number">
+      <input class="form-field" type="text" data-i18n-placeholder="form.via"   placeholder="*Contact Me Via">
+    </div>
+    <textarea class="form-field" data-i18n-placeholder="form.request" placeholder="*Your Request"></textarea>
+    <button class="btn-send" data-i18n="form.send">Send Form</button>
+  </div>
+</section>
+
+<div class="socials-section">
+  <div class="socials-inner">
+    <h3 class="socials-title" data-i18n="socials.title">Contact Us Directly</h3>
+    <div class="socials-row">
+      <a class="social-item" href="https://wa.me/YOURNUMBER" target="_blank">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="social-name">WhatsApp</span><span class="social-plus">+</span>
+      </a>
+      <a class="social-item" href="https://t.me/YOURUSERNAME" target="_blank">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        <span class="social-name">Telegram</span><span class="social-plus">+</span>
+      </a>
+      <a class="social-item" href="https://instagram.com/YOURUSERNAME" target="_blank">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        <span class="social-name">Instagram</span>
+      </a>
+      <a class="social-item" href="mailto:info@idiauto.com">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span class="social-name">Email</span>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 IDI Auto. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="legal.html" data-i18n="footer.legal">Legal Notice</a>
+      <a href="legal.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="legal.html" data-i18n="footer.cookie">Cookie Policy</a>
+      <a href="legal.html" data-i18n="footer.terms">Terms of Service</a>
+    </div>
+  </div>
+</div>
+<a class="whatsapp-float" href="https://wa.me/YOURNUMBER" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
