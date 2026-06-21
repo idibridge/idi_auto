@@ -207,6 +207,14 @@ textarea.form-field { resize: none; height: 130px; }
   /* floating whatsapp */
   .whatsapp-float     { width: 56px; height: 56px; bottom: 18px; right: 18px; }
   .whatsapp-float svg { width: 26px; height: 26px; }
+
+  /* brand marquee — smaller logos so more fit on screen */
+  .marquee-wrap { padding: 24px 0; }
+  .logo-item    { height: 40px; margin: 0 18px; }
+  .logo-item.logo-big        { height: 54px; }
+  .logo-item.logo-ferrari    { height: 27px; }
+  .logo-item.logo-mclaren    { height: 25px; }
+  .logo-item.logo-rangerover { height: 30px; }
 }
 
 @media (max-width: 480px){
@@ -215,4 +223,11 @@ textarea.form-field { resize: none; height: 130px; }
   .nav-right > a    { display: none; }   /* контакт уже есть в бургер-меню */
   .page-hero-title  { font-size: clamp(40px, 13vw, 56px); }
   .btn-ghost        { padding: 14px 30px; letter-spacing: 3px; }
+
+  /* brand marquee — even smaller on narrow phones */
+  .logo-item    { height: 34px; margin: 0 14px; }
+  .logo-item.logo-big        { height: 46px; }
+  .logo-item.logo-ferrari    { height: 23px; }
+  .logo-item.logo-mclaren    { height: 21px; }
+  .logo-item.logo-rangerover { height: 26px; }
 }
