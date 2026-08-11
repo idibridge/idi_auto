@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://YOURUSERNAME.github.io/idi-auto/sitemap.xml
